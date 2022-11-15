@@ -14,7 +14,7 @@ with open('FILENAMEHERE.csv', 'w', newline='') as csv_file:
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = ["!"])
-bot_token = "[PUT YOUR DISCORD SERVER BOT TOKEN HERE]"
+bot_token = "[bot token]"
 
 @client.event
 async def on_ready():
@@ -48,7 +48,7 @@ async def pause(ctx):
 	pause_start = ["pause start",name, start, day]
 	with open('FILENAMEHERE.csv', 'a') as output:
 		writer = csv.writer(output)
-		writer.writerow(pausa_start)
+		writer.writerow(pause_start)
 	await ctx.send("Let's log your pause, " + str(ctx.message.author.mention) + "! :)")
 	print(ctx.message.author.name,"used the bot at",timestamp)
 
